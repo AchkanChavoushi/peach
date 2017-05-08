@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+      <html>
+<head></head>
+<style type="text/css">
+    #media{
+        background-color:#000;
+        color:#fff;
+        float:left;
+        width:640px;
+        height:400px;
+    }
+    #button_container{
+        float:left;
+    }
+    .media_item{
+        padding:15px;
+        border:1px solid #aaa;
+        background-color:#ccc;
+        cursor:pointer;
+        width:200px;
+        margin:4px 0px 0px 4px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+    }
+</style>
+<body>
+    <div id="media">
+        <p>Some Default Content Should Be Here</p>
+    </div>
+    <div id="button_container">
+        <div class="media_item" id="/mymovie.mov" href="file:///Users/Achkan/Desktop/parallax-template/video/lesbian1.mp4">
+            My Movie 4:26
+        </div>
+        <div class="media_item" id="/anothermovie.mov" href="file:///Users/Achkan/Desktop/parallax-template/video/lesbian39.mp4">
+            Another Movie 5:22
+        </div>
+    </div>
+    <script type="text/javascript">
+        function update_source(src){
+            document.getElementById('media').innerHTML =  '<h2>'+src+' Loaded<h2><object height="400" width="640"  id=""  codebase="http://www.apple.com/qtactivex/qtplugin.cab#version=7,3,0,0"  classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"  class="quicktime"> \
+                    <param value="'+src+'" name="src"> \
+                    <param value="false" name="showlogo"> \
+                    <param value="tofit" name="scale"> \
+                    <param value="true" name="saveembedtags"> \
+                    <param value="true" name="postdomevents"> \
+                    <embed height="400" width="640" src="+src+"  type="video/quicktime" postdomevents="true" controller="false"  showlogo="false" scale="tofit"> \
+                        <param value="false" name="controller"> \
+                        <param  value="http://images.apple.com/global/elements/quicktime/qt_endstate640x400.jpg"  name="posterframe"> \
+                        <param value="false" name="showlogo"><param value="true" name="autostart"> \
+                        <param value="true" name="cache"> \
+                        <param value="white" name="bgcolor"> \
+                        <param value="false" name="aggressivecleanup"> \
+                    </embed> \
+                    <param value="false" name="controller"> \
+                    <param  value="http://images.apple.com/global/elements/quicktime/qt_endstate640x400.jpg"  name="posterframe"> \
+                    <param value="false" name="showlogo"> \
+                    <param value="true" name="autostart"> \
+                    <param value="true" name="cache"> \
+                    <param value="black" name="bgcolor"> \
+                    <param value="false" name="aggressivecleanup"> \
+                </object>';
+        }
+
+        var container = document.getElementById('button_container');
+        var buttons = container.getElementsByTagName('div');
+        for(var i = 0; i < buttons.length; i++){
+            buttons[i].setAttribute('onclick', 'update_source(this.id)');
+        }
+    </script>
+</body>
+       </html> 

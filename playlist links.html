@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<title>Player</title>
+
+
+<!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+<style type="text/css">
+ 
+
+
+body {
+background-color: black;
+color :white;
+padding-left: 300px;
+}
+</style>
+
+
+
+
+
+</head>
+<body>
+
+  <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">PEACHX</a></div>
+        </div>
+      </nav>
+        
+
+<div> 
+
+<h1> YOUR VIDEO </h1>
+        
+
+    </div>
+
+  
+
+  <div class="links">
+  <p text align="center">
+    <a src="file:///Users/Achkan/Desktop/parallax-template/video/test1.mp4" >Link 1 </a></p>
+  <p text align="center"> 
+  <a src="file:///Users/Achkan/Desktop/parallax-template/video/test2.mp4">Link 2</a>
+  </p>
+   <p text align="center"> 
+  <a src="file:///Users/Achkan/Desktop/parallax-template/video/test3.mp4">Link 3</a>
+  </p>
+  </div>
+
+  
+<div class="container">
+<video id="myvideo" width="700" height="400" controls style="background:black">
+  <source class="active" src="file:///Users/Achkan/Desktop/parallax-template/video/test1.mp4" />
+  <source src="file:///Users/Achkan/Desktop/parallax-template/video/test2.mp4" />
+   <source src="file:///Users/Achkan/Desktop/parallax-template/video/test3.mp4" />
+
+   <source src="file:///Users/Achkan/Desktop/parallax-template/video/test1.mp4" />
+
+   <source src="file:///Users/Achkan/Desktop/parallax-template/video/test2.mp4" />
+</video>
+</video>
+</div>
+
+<script>
+
+// playlist get an element
+var myvid = document.getElementById('myvideo');
+
+myvid.addEventListener('ended', function(e) {
+  // get the active source and the next video source.
+  // I set it so if there's no next, it loops to the first one
+  var activesource = document.querySelector("#myvideo source.active");
+  var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
+  
+  // deactivate current source, and activate next one
+  activesource.className = "";
+  nextsource.className = "active";
+  
+  // update the video source and play
+  myvid.src = nextsource.src;
+  myvid.play();
+});
+
+
+var videolist = [];
+function addvideoarray() {onclick(url) 
+videolist.push(url);
+
+}
+
+
+
+
+  
+</script>
+</body>
+</html>

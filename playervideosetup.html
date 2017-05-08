@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<title>Player</title>
+
+
+<!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link rel='stylesheet' type='text/css' href="file:///Users/Achkan/Desktop/parallax-template/playervideo/style.css">
+
+<style type="text/css">
+ 
+
+
+body {
+background-color: black;
+color :white;
+padding-left: 300px;
+}
+</style>
+
+
+
+<script src='file:///Users/Achkan/Desktop/parallax-template/playervideo/jquery.js'></script>
+
+<script src='file:///Users/Achkan/Desktop/parallax-template/playervideo/javascript.js'></script>
+
+<script type='text/javascript'>
+
+
+
+</script>
+
+</head>
+<body>
+
+  <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">PEACHX</a></div>
+        </div>
+      </nav>
+        
+
+<div> 
+
+<h1> YOUR VIDEO </h1>
+        
+
+    </div>
+ <ul id="slide-out" class="side-nav fixed">
+      <li><a href="file:///Users/Achkan/Desktop/parallax-template/teen.html">TEEN</a></li>
+      <li><a href="#!">MILF</a></li>
+      <li><a href="#!">AMATEUR</a></li>
+      <li><a href="#!">LESBIAN</a></li>
+      <li><a href="#!">ANAL</a></li>
+      <li><a href="#!">BIG TITS</a></li>
+    </ul>
+  
+  
+
+<div class="container">
+	
+
+
+<figure id="video_player">
+    <video controls poster="nambia1.jpg"    <video width="700" height="400">
+>
+        <source src="lesbian1.mp45" type="video/mp4">
+        <source src="nambia1.webm" type="video/webm">
+    </video>
+    <figcaption>
+        <a href="file:///Users/Achkan/Desktop/parallax-template/video/test1.mp4"><img src="file:///Users/Achkan/Desktop/parallax-template/video/lesbian1.png alt="Nambia Timelapse 1"></a>
+        <a href="file:///Users/Achkan/Desktop/parallax-template/video/test2.mp4"><img src="file:///Users/Achkan/Desktop/parallax-template/video/lesbian2.png alt="Nambia Timelapse 2"></a>
+        <a href="file:///Users/Achkan/Desktop/parallax-template/video/test3.mp4"><img src="file:///Users/Achkan/Desktop/parallax-template/video/lesbian1.png alt="Nambia Timelapse 3"></a>
+        
+        	</video>
+
+    </video>
+    </figcaption>
+</figure>
+
+</div>
+
+<div class="container">
+<video id="myvideo" width="700" height="400" controls style="background:black">
+  <source class="active" src="file:///Users/Achkan/Desktop/parallax-template/video/test1.mp4" />
+  <source src="file:///Users/Achkan/Desktop/parallax-template/video/test2.mp4" />
+   <source src="file:///Users/Achkan/Desktop/parallax-template/video/test3.mp4" />
+</video>
+</video>
+</div>
+
+<script>
+
+// playlist click & play 
+
+var video_player = document.getElementById("video_player"),
+links = video_player.getElementsByTagName('a');
+for (var i=0; i<links.length; i++) {
+    links[i].onclick = handler;
+}
+
+ 
+function handler(e) {
+    e.preventDefault();
+    videotarget = this.getAttribute("href");
+    filename = videotarget.substr(0, videotarget.lastIndexOf('.')) || videotarget;
+    video = document.querySelector("#video_player video");
+    video.removeAttribute("controls");
+    video.removeAttribute("poster");
+    source = document.querySelectorAll("#video_player video source");
+    source[0].src = filename + ".mp4";
+    source[1].src = filename + ".webm";
+    video.load();
+    video.play();    
+}
+
+
+// playlist get an element
+var myvid = document.getElementById('myvideo');
+
+myvid.addEventListener('ended', function(e) {
+  // get the active source and the next video source.
+  // I set it so if there's no next, it loops to the first one
+  var activesource = document.querySelector("#myvideo source.active");
+  var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
+  
+  // deactivate current source, and activate next one
+  activesource.className = "";
+  nextsource.className = "active";
+  
+  // update the video source and play
+  myvid.src = nextsource.src;
+  myvid.play();
+});
+//  add element in the playlist with onclick method
+
+var videolist = [];
+function addvideoarray() {onclick(url) 
+videolist.push(url);
+
+}
+
+var elements = document.getElementsByClassName("href");
+
+var array = []
+
+for (var i = 0; i < elements.length; i++) {
+    var functionBody = elements[i].onclick.toString();
+    array.push(functionBody.substring( functionBody.indexOf("=") + 2, functionBody.lastIndexOf("'") ));
+    console.log(array);}
+
+
+
+    var numArray = [];
+    function addNum(num) {
+        numArray.push(num);
+        document.querySelector(".txt").innerHTML = numArray.join('');
+    }
+</script>
+["<a ....", "<a ...."];
+
+          onClick(url) => {
+
+            array.push(url)
+          }
+dans le array juste stocké dans les urls
+
+</script>
+</body>
+</html>
