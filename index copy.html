@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>PEACHX</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/videoplayer.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+<style>
+body{ margin:0px 0px; }
+
+/* CSS for the landing */
+#hero{
+  background-image:url(file:///Users/Achkan/Desktop/peach/img/background1.jpg);
+  background-size:cover;
+  position:relative;
+}
+
+.header{
+  position:absolute;
+  top:50%;
+  text-align:center;
+  width:100%;
+  color:#fff;
+  font-size:36px;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+    -webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%);  
+    font-family: myFirstFont;
+
+}
+
+#content{
+  padding:100px 50px;
+  text-align:center;
+  width:80%;
+  margin:0px auto;
+}
+
+#content h2{
+  margin:0px 0px 30px 0px;
+}
+
+#footer{
+  padding:30px 0px;
+  text-align:center;
+  background:#ddd;
+}
+
+
+    
+#sign-up {
+     line-height: 12px;
+     width: 200px;
+   
+     margin-top: 125px;
+     margin-right: 0px;
+     position:absolute;
+     top:0;
+     right:0;
+
+ }
+
+#
+
+#logo {
+
+
+}
+
+h1 { 
+  font-family: 'oswald', arial, serif;
+}
+
+
+#startexperience {
+float: left;}
+</style>
+  
+</head>
+<body>
+
+<div id="wrapper">
+  <div id="hero">
+
+      <div id="logo">
+        <a href="index.html"><img width="250" class="responsive-img" id="logo" src="file:///Users/Achkan/Desktop/peach/img/logo-peachx.png"> </a>
+      </div>
+<div id="sign-up"> 
+
+      <a href="file:///Users/Achkan/Desktop/parallax-template/player.html" class="waves-effect pink darken-2 btn-flat white-text" align="left">SIGN UP</a>
+</div>
+    <div class="header">
+
+<div class="row">
+        <div class="col s12 m6">
+      
+      <h1 align="left"> <font href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">PERSONALIZE <br />YOUR  <span style="color: #e3007a">PORN.</span></font>
+
+ </h1>
+      <div id="startexperience">
+      <a href="file:///Users/Achkan/Desktop/parallax-template/player.html" class="waves-effect pink darken-2 btn-flat white-text" align="left">START THE EXPERIENCE</a>
+      </div>
+      </div>
+      </div>
+
+      </div>
+         
+
+   </div>
+  </div>
+  
+
+ 
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+<script>
+//defining the landing et sizing 
+jQuery(document).ready(function($){
+ // Defining a function to set size for #hero 
+    function fullscreen(){
+        jQuery('#hero').css({
+            width: jQuery(window).width(),
+            height: jQuery(window).height()
+        });
+    }
+  
+    fullscreen();
+
+  // Run the function in case of window resize
+  jQuery(window).resize(function() {
+       fullscreen();         
+    });
+
+});
+</script>
+  </body>
+</html>

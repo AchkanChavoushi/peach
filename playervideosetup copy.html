@@ -62,22 +62,54 @@ padding-left: 300px;
         </a>
         
 </div>
+
+</body>
+
+<a onClick'>Play</a>
+
+<a href="" onClick="javascript:loadVideo();">Load Video</a><br>
+<video id="video" controls width="560">
+     <source id="mp4" type="video/mp4" />
+</video>
+
+
+  <video controls poster="nambia1.jpg"    <video width="700" height="400">
+
+
+  </video>
+
+
 <script>
-var array = []
+// add video to an array
+var videoList = []
 
 function addUrlToArray(url) {
-  array.push(url);
-  console.log('Array :', array);
+  videoList.push(url);
 }
+
+var i = 0; // define i
+var videoCount = videoList.length;
+ 
+function videoPlay(videoNum) {
+    document.getElementById("myVideo").setAttribute("src", videoList[videoNum]);
+    document.getElementById("myVideo").load();
+    document.getElementById("myVideo").play();
+}
+document.getElementById('myVideo').addEventListener('ended', myHandler, false);
+videoPlay(0); // play the video
+ 
+function myHandler() {
+    i++;
+    if (i == (videoCount - 1)) {
+        i = 0;
+        videoPlay(i);
+    } else {
+        videoPlay(i);
+    }
+}
+
 </script>
-["<a ....", "<a ...."];
 
-          onClick(url) => {
 
-            array.push(url)
-          }
-dans le array juste stocké dans les urls
-
-</script>
 </body>
 </html>
